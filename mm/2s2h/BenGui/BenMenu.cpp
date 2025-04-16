@@ -708,6 +708,10 @@ void BenMenu::AddEnhancements() {
         .CVar("gEnhancements.PlayerActions.ArrowCycle")
         .Options(CheckboxOptions().Tooltip(
             "While aiming the bow, use R to cycle between Normal, Fire, Ice and Light arrows."));
+    AddWidget(path, "Invert Shield Y Axis", WIDGET_CVAR_CHECKBOX)
+        .CVar("gEnhancements.Player.InvertShieldY")
+        .Options(CheckboxOptions().Tooltip(
+            "Invert the Y axis while holding the shield so that it moves up with the left stick."));
     AddWidget(path, "Bombchu Drops", WIDGET_CVAR_CHECKBOX)
         .CVar("gEnhancements.Equipment.ChuDrops")
         .Options(
