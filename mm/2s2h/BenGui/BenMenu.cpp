@@ -1140,6 +1140,12 @@ void BenMenu::AddEnhancements() {
         .Options(CheckboxOptions().Tooltip(
             "Pressing the Z or R buttons while the Deposit/Withdrawal Rupees dialogue is open will set "
             "the Rupees to Links current Rupees or 0 respectively."));
+    AddWidget(path, "Better Bank Teller", WIDGET_CVAR_CHECKBOX)
+        .CVar("gEnhancements.Dialogue.BetterBankTeller")
+        .Options(CheckboxOptions().Tooltip("Keeps the bank teller from letting you withdraw or deposit zero rupees."));
+    AddWidget(path, "Faster Bank Teller", WIDGET_CVAR_CHECKBOX)
+        .CVar("gEnhancements.Dialogue.FasterBankTeller")
+        .Options(CheckboxOptions().Tooltip("Makes the bank teller less talkative."));
     AddWidget(path, "Fast Text", WIDGET_CVAR_CHECKBOX)
         .CVar("gEnhancements.Dialogue.FastText")
         .Options(

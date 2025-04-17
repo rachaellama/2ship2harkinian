@@ -717,3 +717,13 @@ void EnGinkoMan_Draw(Actor* thisx, PlayState* play) {
 
     CLOSE_DISPS(play->state.gfxCtx);
 }
+
+// #region 2S2H [Enhancement] Used for better/faster bank teller
+void EnGinkoMan_ChangeAnimationSitting(EnGinkoMan* this) {
+    Actor_ChangeAnimationByInfo(&this->skelAnime, sAnimationInfo, GINKO_ANIM_SITTING);
+}
+
+void EnGinkoMan_ChangeAnimationLegsmacking(EnGinkoMan* this) {
+    Actor_ChangeAnimationByInfo(&this->skelAnime, sAnimationInfo, GINKO_ANIM_LEGSMACKING);
+}
+// #region
