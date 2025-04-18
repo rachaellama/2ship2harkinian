@@ -324,6 +324,11 @@ int GameInteractor_InvertControl(GIInvertType type) {
                 result *= -1;
             }
             break;
+        case GI_INVERT_TELESCOPE_Y:
+            if (CVarGetInteger("gEnhancements.Camera.InvertTelescopeY", 0)) {
+                result *= -1;
+            }
+            break;
     }
 
     // Invert all X axis inputs if the Mirrored World mode is enabled

@@ -472,6 +472,10 @@ void BenMenu::AddEnhancements() {
         .Options(CheckboxOptions()
                      .Tooltip("Inverts the Y Axis of the Right Stick in First Person Mode.")
                      .DefaultValue(true));
+    AddWidget(path, "Invert Telescope Y Axis", WIDGET_CVAR_CHECKBOX)
+        .CVar("gEnhancements.Camera.InvertTelescopeY")
+        .Options(CheckboxOptions().Tooltip(
+            "Invert the Y axis of telescopes so that the view moves up with the left stick."));
     AddWidget(path, "Right Stick X Axis Sensitivity: %.0f%%", WIDGET_CVAR_SLIDER_FLOAT)
         .CVar("gEnhancements.Camera.FirstPerson.RightStickSensitivityX")
         .PreFunc([](WidgetInfo& info) { info.isHidden = mBenMenu->disabledMap.at(DISABLE_FOR_RIGHT_STICK_OFF).active; })
